@@ -1,73 +1,125 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject obj;
+    //[SerializeField] private GameObject objects;
     [SerializeField] private float time = 0;
     [SerializeField] private int count = 0;
     private float randomX;
-    public GameObject Enemy;
+
     private float randomZ;
+    [SerializeField] Transform TargetTransform;
+
+
 
     //Start is called before the first frame update
     void Start()
     {
-
+        SpawnEnemy();
     }
 
-    // Update is called once per frame
-    void Update()
+    private GameObject SpawnEnemy()
     {
+        Vector3 fromTo = TargetTransform.position - transform.position;
+        Vector3 fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
+        Ballistics ballistics = new Ballistics();
+        Move move = new Move();
+
+        transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up);
+
         time = Time.deltaTime + time;
         if (time > 0.1)
         {
-            randomX = Random.Range(-100, 100);
-            randomZ = Random.Range(-70, 100);
-            Vector3 whereToSpawn = new Vector3(randomX, 60, randomZ);
-            Enemy = Instantiate(obj, whereToSpawn, Quaternion.identity);
+            randomX = Random.Range(-15, 15);
+            randomZ = Random.Range(-15, 15);
+            Vector3 whereToSpawn = new Vector3(randomX, 30 , randomZ);
+            
+            GameObject Enemy = Instantiate(move.enemyPrefab, whereToSpawn, Quaternion.identity);
+            Enemy.GetComponent<Rigidbody>().velocity = transform.forward * ballistics.v;
             count++;
 
 
             Destroy(Enemy, 5);
             time = 0;
         }
+        return null;
     }
+    
 }
 
-public class Ball : MonoBehaviour
-{
-    public Transform SpawnTransform;
-    public Transform TargetTransform;
 
-    public float AngleInDegrees;
-    float g = Physics.gravity.y;
 
-    protected float v;
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
-    public void Shoot(Spawner spawner)
-    {
 
-        Vector3 fromTo = TargetTransform.position - transform.position;
-        Vector3 fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
 
-        transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up);
+//using UnityEngine;
 
-        float x = fromToXZ.magnitude;
-        float y = fromTo.y;
-        float AngleInRadians = AngleInDegrees * Mathf.PI / 180;
-        float v2 = (g * x * x) / (2 * (y - Mathf.Tan(AngleInRadians) * x) * Mathf.Pow(Mathf.Cos(AngleInRadians), 2));
-        float v = Mathf.Sqrt(Mathf.Abs(v2));
+//public class Spawner : MonoBehaviour
+//{
+//    [SerializeField] private GameObject obj;
+//    [SerializeField] private float time = 0;
+//    [SerializeField] private int count = 0;
+//    private float randomX;
+//    public GameObject Enemy;
+//    private float randomZ;
 
-        GameObject en = GetComponent<GameObject>();
-        spawner.Enemy = en; ;
-        en.GetComponent<Rigidbody>().velocity = SpawnTransform.forward * v;
+//    //Start is called before the first frame update
 
-    }
-}
+
+//    // Update is called once per frame
+//    void Update()
+//    {
+//        time = Time.deltaTime + time;
+//        if (time > 0.1)
+//        {
+//            randomX = Random.Range(-100, 100);
+//            randomZ = Random.Range(-70, 100);
+//            Vector3 whereToSpawn = new Vector3(randomX, 60, randomZ);
+//            Enemy = Instantiate(obj, whereToSpawn, Quaternion.identity);
+//            count++;
+
+
+//            Destroy(Enemy, 5);
+//            time = 0;
+//        }
+//    }
+//}
+
+//public class Ball : MonoBehaviour
+//{
+//    public Transform SpawnTransform;
+//    public Transform TargetTransform;
+
+//    public float AngleInDegrees;
+//    float g = Physics.gravity.y;
+
+//    protected float v;
+//    // Update is called once per frame
+//    void Update()
+//    {
+//    }
+
+//    public void Shoot(Spawner spawner)
+//    {
+
+//        Vector3 fromTo = TargetTransform.position - transform.position;
+//        Vector3 fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
+
+//        transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up);
+
+//        float x = fromToXZ.magnitude;
+//        float y = fromTo.y;
+//        float AngleInRadians = AngleInDegrees * Mathf.PI / 180;
+//        float v2 = (g * x * x) / (2 * (y - Mathf.Tan(AngleInRadians) * x) * Mathf.Pow(Mathf.Cos(AngleInRadians), 2));
+//        float v = Mathf.Sqrt(Mathf.Abs(v2));
+
+//        GameObject en = GetComponent<GameObject>();
+//        spawner.Enemy = en; ;
+//        en.GetComponent<Rigidbody>().velocity = SpawnTransform.forward * v;
+
+//    }
+//}
 
 //public class Spawner : MonoBehaviour
 //{

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Ballistics : MonoBehaviour
@@ -9,7 +11,7 @@ public class Ballistics : MonoBehaviour
     float g = Physics.gravity.y;
 
     public GameObject Toy;
-    public float v;
+    private float v;
 
 
     // Start is called before the first frame update
@@ -30,16 +32,25 @@ public class Ballistics : MonoBehaviour
         Vector3 fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
 
         transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up);
-        SpawnTransform.localEulerAngles = new Vector3(-AngleInDegrees, 0f, 0f);   
 
         float x = fromToXZ.magnitude;
         float y = fromTo.y;
         float AngleInRadians = AngleInDegrees * Mathf.PI / 180;
         float v2 = (g * x * x) / (2 * (y - Mathf.Tan(AngleInRadians) * x) * Mathf.Pow(Mathf.Cos(AngleInRadians), 2));
-        v = Mathf.Sqrt(Mathf.Abs(v2));    
+        float v = Mathf.Sqrt(Mathf.Abs(v2));
 
+       
+        
+        
+            GameObject newToy = Instantiate(Toy, SpawnTransform.position, Quaternion.identity);
+            newToy.GetComponent<Rigidbody>().velocity = SpawnTransform.forward * v;
+      
+                Destroy(newToy, 10);
+  
     }
 }
+
+
 //using UnityEngine;
 
 //public class Ballistics : MonoBehaviour
@@ -245,7 +256,7 @@ public class Ballistics : MonoBehaviour
 //    public void Shoot()
 //    {
 
-        
+
 
 //    }
 //}

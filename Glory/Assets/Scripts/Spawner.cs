@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
             Vector3 whereToSpawn = new Vector3(randomX, 30 , randomZ);
             
             GameObject Enemy = Instantiate(move.enemyPrefab, whereToSpawn, Quaternion.identity);
-            Enemy.GetComponent<Rigidbody>().velocity = transform.forward * ballistics.v;
+            Enemy.GetComponent<Rigidbody>().velocity = transform.forward ; 
             count++;
 
 

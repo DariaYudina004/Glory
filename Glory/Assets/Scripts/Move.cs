@@ -1,39 +1,21 @@
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class Move : MonoBehaviour
-{
-    public List<Transform> spawnPoints = new List<Transform>();
-    public List<GameObject> enemyPrefabs = new List<GameObject>();
-    public GameObject enemyPrefab;
-    
+//public class Move : MonoBehaviour
+//{
+//    SS spawner = new SS();
+//    private void OnEnable()
+//    {
+//        Mic.onTouched += spawner.Spawn;
 
-    private void Start()
-    {
-        SpawnEnemies();
-    }
+//    }
 
-    public void SpawnEnemies()
-    {
-        
-        
-            Transform spawnPoint = GetRandomSpawnPoint();
-            GameObject enemy = SpawnEnemy(spawnPoint);
-        
-    }
+//    private void OnDisable()
+//    {
+//        Mic.onTouched += spawner.Spawn;
 
-    private Transform GetRandomSpawnPoint()
-    {
-        return spawnPoints[Random.Range(0, spawnPoints.Count)];
-    }
-
-    private GameObject SpawnEnemy(Transform spawnPoint)
-    {
-        // —юда можно дописать использование пула дл€ врагов или более сложный алгоритм выбора противника
-        enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
-        return enemyPrefab.gameObject;
-    }
-}
+//    }
+//}
 
 
 

@@ -2601,6 +2601,7 @@ MonoBehaviour:
   TargetTransform: {fileID: 2040648616}
   AngleInDegrees: 0
   v: 0
+  invokeDelay: 5
 --- !u!1001 &502349374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6799,6 +6800,7 @@ MonoBehaviour:
   TargetTransform: {fileID: 2040648616}
   AngleInDegrees: 0
   v: 0
+  invokeDelay: 5
 --- !u!4 &846836683
 Transform:
   m_ObjectHideFlags: 0
@@ -6865,6 +6867,7 @@ MonoBehaviour:
   Toy: {fileID: 6116304784293518536, guid: 5ee86d9f443dc39488e921feacf46477, type: 3}
   time: 0
   count: 0
+  invokeDelay: 5
 --- !u!1 &881265234
 GameObject:
   m_ObjectHideFlags: 0
@@ -7537,6 +7540,7 @@ MonoBehaviour:
   TargetTransform: {fileID: 2040648616}
   AngleInDegrees: 0
   v: 0
+  invokeDelay: 5
 --- !u!4 &990001922
 Transform:
   m_ObjectHideFlags: 0
@@ -9046,6 +9050,7 @@ MonoBehaviour:
   TargetTransform: {fileID: 2040648616}
   AngleInDegrees: 0
   v: 0
+  invokeDelay: 5
 --- !u!4 &1166561309
 Transform:
   m_ObjectHideFlags: 0
@@ -10366,6 +10371,7 @@ Transform:
   - {fileID: 652029069}
   - {fileID: 2138829119}
   - {fileID: 615299108}
+  - {fileID: 1512544560}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11112,6 +11118,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1459932952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459932949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced9b13dceb961944a3df95074bc6593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1467255434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 625ee7f594594ec4bb72568307db20ca, type: 3}
@@ -11479,7 +11497,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512544558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 19.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11491,8 +11509,8 @@ Transform:
   - {fileID: 493355567}
   - {fileID: 1912044348}
   - {fileID: 848263810}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1296264652}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1512544561
 MonoBehaviour:
@@ -11506,17 +11524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced9b13dceb961944a3df95074bc6593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 1166561309}
-  - {fileID: 1705427033}
-  - {fileID: 846836683}
-  - {fileID: 990001922}
-  enemyPrefabs:
-  - {fileID: 4977608621006297323, guid: 5b27c582fc7e2ac47a5bba11fbfeac11, type: 3}
-  - {fileID: 7441999845396183753, guid: 3bb10ae1e88595f4a9d709549df954c4, type: 3}
-  - {fileID: 2872499948844614821, guid: 581eaa18a49d5d14381a27636898165d, type: 3}
-  - {fileID: 3282229763515461115, guid: e9124f76befc5c04bad5722ac738eff6, type: 3}
-  enemyPrefab: {fileID: 0}
 --- !u!1 &1530993139
 GameObject:
   m_ObjectHideFlags: 0
@@ -12263,6 +12270,7 @@ MonoBehaviour:
   TargetTransform: {fileID: 2040648616}
   AngleInDegrees: 0
   v: 0
+  invokeDelay: 5
 --- !u!4 &1705427033
 Transform:
   m_ObjectHideFlags: 0
@@ -13098,6 +13106,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1844578073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844578070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced9b13dceb961944a3df95074bc6593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1859228458
 GameObject:
   m_ObjectHideFlags: 0
@@ -13598,6 +13618,7 @@ MonoBehaviour:
   Toy: {fileID: 7661502864894051734, guid: 8b928e461e10ab847adb05aceebaf4c9, type: 3}
   time: 0
   count: 0
+  invokeDelay: 5
 --- !u!1 &1940078894
 GameObject:
   m_ObjectHideFlags: 0

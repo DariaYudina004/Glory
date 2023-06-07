@@ -1,8 +1,17 @@
 using UnityEngine;
+using System;
 
 public class Mic : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //public static Action onTouched;
+    //public static Action onHit;
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    onTouched?.Invoke();
+    //    onHit?.Invoke();
+    //}
+
     public void Hit()
     {
         GetComponent<Rigidbody>().AddForce(Vector3.up * 1000);

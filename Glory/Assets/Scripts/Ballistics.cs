@@ -12,22 +12,19 @@ public class Ballistics : MonoBehaviour
 
     public GameObject Toy;
     private float v;
-    [SerializeField] private float time = 0;
+    [SerializeField] private float time = 0 ;
     [SerializeField] private int count = 0;
+    [SerializeField] private float invokeDelay = 5f;
 
 
-    // Start is called before the first frame update
-    void Start()
+    
+    
+    private void Update()
     {
-
+        Invoke("Shoot", invokeDelay);
+        Debug.Log(Equals(Time.time, Time.deltaTime));
+        Debug.Log("A");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Shoot();
-    }
-
     public void Shoot()
     {
         Vector3 fromTo = TargetTransform.position - transform.position;
@@ -40,10 +37,12 @@ public class Ballistics : MonoBehaviour
         float AngleInRadians = AngleInDegrees * Mathf.PI / 180;
         float v2 = (g * x * x) / (2 * (y - Mathf.Tan(AngleInRadians) * x) * Mathf.Pow(Mathf.Cos(AngleInRadians), 2));
         float v = Mathf.Sqrt(Mathf.Abs(v2));
-
+        Debug.Log("B");
         time = Time.deltaTime + time;
+        Debug.Log("C");
         if (time > 1)
         {
+            Debug.Log("D");
             GameObject newToy = Instantiate(Toy, SpawnTransform.position, Quaternion.identity);
             newToy.GetComponent<Rigidbody>().velocity = SpawnTransform.forward * v;
 
@@ -51,6 +50,7 @@ public class Ballistics : MonoBehaviour
 
             count++;
             time = 0;
+            Debug.Log("F");
         }
 
 

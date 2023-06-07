@@ -2,9 +2,9 @@ using UnityEngine;
 using System;
 using static UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRDeviceSimulator;
 
-public class Toy : MonoBehaviour
+public class Ball : MonoBehaviour
 {
-    [SerializeField] private int count = 0;
+    
     //public static Action onTouched;
 
     private void OnCollisionEnter(Collision collision)
@@ -14,7 +14,7 @@ public class Toy : MonoBehaviour
         if (collision.gameObject.GetComponent<Mic>())
         {
             mic.Hit();
-            count++;
+            
 
         }
     }

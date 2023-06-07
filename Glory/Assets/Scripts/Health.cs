@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Ball ball = collision.gameObject.GetComponent<Ball>();
-        EndOfGame end = new EndOfGame();
+        
         if (collision.gameObject.GetComponent<Ball>())
         {
             if (healthOfPlayer > 100) { healthOfPlayer = 100; }

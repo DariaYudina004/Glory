@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int healthOfPlayer = 3;
+    public int healthOfPlayer = 100;
     [SerializeField] private GameObject panel;
 
     void Update()

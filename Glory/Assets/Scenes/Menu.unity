@@ -10837,8 +10837,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFX: {fileID: 1916572417}
-  hoverFx: {fileID: 0}
-  clickFx: {fileID: 8300000, guid: 1dfeb2f12444c43448270834374132ed, type: 3}
+  hoverFx: {fileID: 8300000, guid: 1dfeb2f12444c43448270834374132ed, type: 3}
+  clickFx: {fileID: 8300000, guid: 418a281db60db0d4d8e6a843c56c97de, type: 3}
 --- !u!82 &1916572417
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10849,7 +10849,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 418a281db60db0d4d8e6a843c56c97de, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

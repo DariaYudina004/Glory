@@ -1,62 +1,122 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Ballistics : MonoBehaviour
+public class Ballistics : Spawner
 {
-    public Transform SpawnTransform;
-    public Transform TargetTransform;
-
     public float AngleInDegrees;
     float g = Physics.gravity.y;
-
-    public GameObject Toy;
-    private float v;
-    [SerializeField] private float time = 0 ;
-    [SerializeField] private int count = 0;
     [SerializeField] private float invokeDelay = 5f;
 
-
-    
-    
     private void Update()
     {
         Invoke("Shoot", invokeDelay);
-        Debug.Log(Equals(Time.time, Time.deltaTime));
-        Debug.Log("A");
+
     }
+
     public void Shoot()
     {
         Vector3 fromTo = TargetTransform.position - transform.position;
         Vector3 fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
 
         transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up);
-
+        
         float x = fromToXZ.magnitude;
         float y = fromTo.y;
         float AngleInRadians = AngleInDegrees * Mathf.PI / 180;
         float v2 = (g * x * x) / (2 * (y - Mathf.Tan(AngleInRadians) * x) * Mathf.Pow(Mathf.Cos(AngleInRadians), 2));
         float v = Mathf.Sqrt(Mathf.Abs(v2));
-        Debug.Log("B");
+
         time = Time.deltaTime + time;
-        Debug.Log("C");
+
         if (time > 1)
         {
-            Debug.Log("D");
-            GameObject newToy = Instantiate(Toy, SpawnTransform.position, Quaternion.identity);
+            GameObject newToy = Instantiate(obj, SpawnTransform.position, Quaternion.identity);
             newToy.GetComponent<Rigidbody>().velocity = SpawnTransform.forward * v;
 
             Destroy(newToy, 10);
 
             count++;
             time = 0;
-            Debug.Log("F");
+
         }
-
-
-        
     }
 }
+
+
+
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+
+//public class Ballistics : MonoBehaviour
+//{
+//    public Transform SpawnTransform;
+//    public Transform TargetTransform;
+
+//    public float AngleInDegrees;
+//    float g = Physics.gravity.y;
+
+//    public GameObject Toy;
+//    private float v;
+//    [SerializeField] private float time = 0 ;
+//    [SerializeField] private int count = 0;
+//    [SerializeField] private float invokeDelay = 5f;
+
+
+
+
+//    private void Update()
+//    {
+//        Invoke("Shoot", invokeDelay);
+
+//    }
+//    public void Shoot()
+//    {
+//        Vector3 fromTo = TargetTransform.position - transform.position;
+//        Vector3 fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
+
+//        transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up);
+
+//        float x = fromToXZ.magnitude;
+//        float y = fromTo.y;
+//        float AngleInRadians = AngleInDegrees * Mathf.PI / 180;
+//        float v2 = (g * x * x) / (2 * (y - Mathf.Tan(AngleInRadians) * x) * Mathf.Pow(Mathf.Cos(AngleInRadians), 2));
+//        float v = Mathf.Sqrt(Mathf.Abs(v2));
+
+//        time = Time.deltaTime + time;
+
+//        if (time > 1)
+//        {
+
+//            GameObject newToy = Instantiate(Toy, SpawnTransform.position, Quaternion.identity);
+//            newToy.GetComponent<Rigidbody>().velocity = SpawnTransform.forward * v;
+
+//            Destroy(newToy, 10);
+
+//            count++;
+//            time = 0;
+
+//        }
+
+
+
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //using UnityEngine;

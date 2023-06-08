@@ -3463,8 +3463,6 @@ MonoBehaviour:
   count: 0
   SpawnTransform: {fileID: 493355567}
   TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  v: 0
   invokeDelay: 5
 --- !u!1001 &502349374
 PrefabInstance:
@@ -7822,8 +7820,6 @@ MonoBehaviour:
   count: 0
   SpawnTransform: {fileID: 846836683}
   TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  v: 0
   invokeDelay: 5
 --- !u!4 &846836683
 Transform:
@@ -7866,7 +7862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848263809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.2, y: 13.9, z: 0}
+  m_LocalPosition: {x: -15.2, y: 14.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7885,12 +7881,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8987cdde41345a46bf37e341da24042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnTransform: {fileID: 848263810}
-  TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  Toy: {fileID: 6116304784293518536, guid: 5ee86d9f443dc39488e921feacf46477, type: 3}
+  obj: {fileID: 6116304784293518536, guid: 5ee86d9f443dc39488e921feacf46477, type: 3}
   time: 0
   count: 0
+  SpawnTransform: {fileID: 848263810}
+  TargetTransform: {fileID: 2040648616}
+  invokeDelay: 5
+  AngleInDegrees: 0
   invokeDelay: 5
 --- !u!1 &852526233
 GameObject:
@@ -8798,8 +8795,6 @@ MonoBehaviour:
   count: 0
   SpawnTransform: {fileID: 990001922}
   TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  v: 0
   invokeDelay: 5
 --- !u!4 &990001922
 Transform:
@@ -10515,8 +10510,6 @@ MonoBehaviour:
   count: 0
   SpawnTransform: {fileID: 1166561309}
   TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  v: 0
   invokeDelay: 5
 --- !u!4 &1166561309
 Transform:
@@ -12315,6 +12308,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408696491}
   m_CullTransparentMesh: 1
+--- !u!1 &1411705679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411705680}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411705680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411705679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2040648616}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1432142463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13544,7 +13568,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1512544560}
-  - component: {fileID: 1512544561}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -13574,18 +13597,6 @@ Transform:
   m_Father: {fileID: 1296264652}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1512544561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512544558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced9b13dceb961944a3df95074bc6593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1530993139
 GameObject:
   m_ObjectHideFlags: 0
@@ -14946,8 +14957,6 @@ MonoBehaviour:
   count: 0
   SpawnTransform: {fileID: 1705427033}
   TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  v: 0
   invokeDelay: 5
 --- !u!4 &1705427033
 Transform:
@@ -16764,12 +16773,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8987cdde41345a46bf37e341da24042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnTransform: {fileID: 1912044348}
-  TargetTransform: {fileID: 2040648616}
-  AngleInDegrees: 0
-  Toy: {fileID: 7661502864894051734, guid: 8b928e461e10ab847adb05aceebaf4c9, type: 3}
+  obj: {fileID: 7661502864894051734, guid: 8b928e461e10ab847adb05aceebaf4c9, type: 3}
   time: 0
   count: 0
+  SpawnTransform: {fileID: 1912044348}
+  TargetTransform: {fileID: 2040648616}
+  invokeDelay: 5
+  AngleInDegrees: 0
   invokeDelay: 5
 --- !u!1 &1933741252
 GameObject:
@@ -17807,11 +17817,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040648613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.22, y: 6.78, z: -114.16}
+  m_LocalPosition: {x: -19.22, y: 6.67, z: -114.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2127738261}
+  - {fileID: 1411705680}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17969,7 +17980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7055d5c5eb0e49a4dac56768bb73cbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfPlayer: 2
+  healthOfPlayer: 10000
   panel: {fileID: 1808993741}
 --- !u!1 &2042576651
 GameObject:

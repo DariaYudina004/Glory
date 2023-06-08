@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
         
         if (collision.gameObject.GetComponent<Ball>())
         {
-            if (healthOfPlayer > 100) { healthOfPlayer = 100; }
+            if (healthOfPlayer > 1000) { healthOfPlayer = 1000; }
             
             if (healthOfPlayer < 0) 
             {

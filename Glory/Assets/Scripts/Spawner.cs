@@ -2,22 +2,20 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject obj;
-    [SerializeField] private float time = 0;
-    [SerializeField] private int count = 0;
+    [SerializeField] protected GameObject obj;
+    [SerializeField] protected float time = 0;
+    [SerializeField] protected int count = 0;
     private float randomX;
 
     private float randomZ;
-    [SerializeField] Transform SpawnTransform;
-    [SerializeField] Transform TargetTransform;
+    [SerializeField] protected Transform SpawnTransform;
+    [SerializeField] protected Transform TargetTransform;
 
-    public float AngleInDegrees;
-    float g = Physics.gravity.y;
-    [SerializeField] private float v;
+
 
     [SerializeField] private float invokeDelay = 5f;
 
-        private void Update()
+    private void Update()
     {
         Invoke("Spawn", invokeDelay);
     }

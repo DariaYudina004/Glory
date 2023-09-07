@@ -81,10 +81,7 @@ public class TestGeneration : MonoBehaviour
     void Update()
     {
         Invoke("Spawner", invokeDelay);
-        //if (count > 1 )
-        //{
-        //    InvokeRepeating("Spawner", 3f,3f);
-        //}
+
     }
 
     public void Spawner()
@@ -100,7 +97,7 @@ public class TestGeneration : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up); // объект поворачивается за целью и следит за ее передвижением 
 
         time = Time.deltaTime + time;
-        if (time > 0.7 )
+        if (time > 1.5 )
         {
             float x = fromToXZ.magnitude; // расстояние от стрелка до цели в горизонтальной плоскости. Длина вектора fromToXZ
             float y = fromTo.y; // 
@@ -112,7 +109,7 @@ public class TestGeneration : MonoBehaviour
             GameObject newBall = Instantiate(randObject, randPoint.position, Quaternion.identity);
             newBall.GetComponent<Rigidbody>().velocity = randPoint.forward * v /*1.15f*/;
 
-            Destroy(newBall, 5);
+            Destroy(newBall, 15 );
             time = 0;
             count++;
         }

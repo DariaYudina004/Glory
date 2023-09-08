@@ -60,7 +60,7 @@
 //====================================================================================================================
 using UnityEngine;
 
-public class TestGeneration : MonoBehaviour
+public class TestGeneration : DifficultyLevel
 {
     [SerializeField] private Transform[] SpawnTransform;
     [SerializeField] private Transform TargetTransform;
@@ -73,11 +73,16 @@ public class TestGeneration : MonoBehaviour
     [SerializeField] private float time = 0;
     [SerializeField] private int count = 0;
 
-    [SerializeField] private float invokeDelay = 5f;
+    [SerializeField] private float invokeDelay = 3f;
     private GameObject randObject;
     private Transform randPoint;
 
     // Update is called once per frame
+    private void Start()
+    {
+        DelayLevel = GlobalControl.DelayLevel;
+        Debug.Log(DelayLevel);
+    }
     void Update()
     {
         Invoke("Spawner", invokeDelay);
@@ -97,8 +102,10 @@ public class TestGeneration : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up); // объект поворачивается за целью и следит за ее передвижением 
 
         time = Time.deltaTime + time;
-        if (time > 1.5 )
+        Debug.Log(DelayLevel);
+        if (time > DelayLevel)
         {
+            Debug.Log(DelayLevel);
             float x = fromToXZ.magnitude; // расстояние от стрелка до цели в горизонтальной плоскости. Длина вектора fromToXZ
             float y = fromTo.y; // 
 

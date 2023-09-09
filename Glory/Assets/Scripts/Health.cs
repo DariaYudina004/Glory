@@ -3,42 +3,34 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int healthOfPlayer;
+    public int healthOfPlayer = 100;
+   
     [SerializeField] private GameObject panel;
-
-    private void Start()
-    {
-        healthOfPlayer = GlobalControl.healthOfPlayer;
-        Debug.Log(healthOfPlayer);
-    }
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Ball ball = collision.gameObject.GetComponent<Ball>();
-        
+        //Ball ball = collision.gameObject.GetComponent<Ball>();
+        Debug.Log(healthOfPlayer);
+        Debug.Log(healthOfPlayer);
         if (collision.gameObject.GetComponent<Ball>())
         {
-            if (healthOfPlayer > 1000) { healthOfPlayer = 1000; }
-            
+            Debug.Log(healthOfPlayer);
+            Debug.Log(healthOfPlayer);
+
             if (healthOfPlayer < 0) 
             {
-                
                 healthOfPlayer = 0;
             }
+
             else if (healthOfPlayer == 0) 
             {
-                
                 panel.gameObject.SetActive(true);
-                
                 Time.timeScale = 0;
-                
             }
-            else healthOfPlayer -= 1;
 
+            else healthOfPlayer -= 1;
+            Debug.Log(healthOfPlayer);
+            Debug.Log(healthOfPlayer);
 
         }
     }

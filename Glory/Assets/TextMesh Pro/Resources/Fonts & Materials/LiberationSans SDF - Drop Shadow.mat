@@ -10,7 +10,6 @@ Material:
   m_Name: LiberationSans SDF - Drop Shadow
   m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
   m_ValidKeywords:
-  - OUTLINE_ON
   - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 5
@@ -56,7 +55,7 @@ Material:
     - _CullMode: 0
     - _Diffuse: 0.5
     - _DiffusePower: 1
-    - _FaceDilate: -0.04
+    - _FaceDilate: -0.31
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlowInner: 0.05
@@ -75,7 +74,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.76725
+    - _ScaleRatioC: 1.01025
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

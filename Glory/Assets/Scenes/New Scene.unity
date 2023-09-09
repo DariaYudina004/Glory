@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayLevel: 0
   SpawnTransform:
   - {fileID: 931188503}
   - {fileID: 0}
@@ -475,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayLevel: 0
   SpawnTransform:
   - {fileID: 2103527874}
   - {fileID: 0}
@@ -1186,6 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayLevel: 0
   SpawnTransform:
   - {fileID: 491771113}
   - {fileID: 0}

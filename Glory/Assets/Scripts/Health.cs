@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int healthOfPlayer = 100000;
+    public int healthOfPlayer;
     [SerializeField] private GameObject panel;
 
+    private void Start()
+    {
+        healthOfPlayer = GlobalControl.healthOfPlayer;
+        Debug.Log(healthOfPlayer);
+    }
     void Update()
     {
         
@@ -17,7 +22,7 @@ public class Health : MonoBehaviour
         
         if (collision.gameObject.GetComponent<Ball>())
         {
-            if (healthOfPlayer > 100000) { healthOfPlayer = 100000; }
+            if (healthOfPlayer > 1000) { healthOfPlayer = 1000; }
             
             if (healthOfPlayer < 0) 
             {
@@ -28,6 +33,7 @@ public class Health : MonoBehaviour
             {
                 
                 panel.gameObject.SetActive(true);
+                
                 Time.timeScale = 0;
                 
             }

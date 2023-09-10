@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Ball ball = collision.gameObject.GetComponent<Ball>();
+        Ball ball = collision.gameObject.GetComponent<Ball>();
         Debug.Log(healthOfPlayer);
         Debug.Log(healthOfPlayer);
         if (collision.gameObject.GetComponent<Ball>())

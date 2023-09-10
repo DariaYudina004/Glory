@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Generation : DifficultyLevel
@@ -9,7 +10,7 @@ public class Generation : DifficultyLevel
 
     float g = Physics.gravity.y; // 9.8f
 
-    [SerializeField] private GameObject[] ball;
+    public List<GameObject> ball ;
     [SerializeField] private float time = 0;
     [SerializeField] private int count = 0;
 
@@ -30,7 +31,7 @@ public class Generation : DifficultyLevel
 
     public void Spawner()
     {
-        randObject = ball[Random.Range(0, ball.Length - 1)];
+        randObject = ball[Random.Range(0, ball.Count - 1)];
         randPoint = SpawnTransform[Random.Range(0, SpawnTransform.Length - 1)];
 
         randPoint.localEulerAngles = new Vector3(-AngleInDegrees, 0f, 0f);// изменение положения пушки поссредством изменения угла в инспекторе

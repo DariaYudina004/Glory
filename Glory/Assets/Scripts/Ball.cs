@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] protected int countofHit;
-    [SerializeField] protected int count;
+    [SerializeField] protected int countofHit = 0;
+    public int count;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,6 +16,7 @@ public class Ball : MonoBehaviour
             Debug.Log("hit");
             Debug.Log(countofHit);
             count = countofHit;
+
         }
     }
 }

@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour
 {
     
     [SerializeField] Transform player;
-    [SerializeField] private GameObject panel;
+    [SerializeField] GameObject panel;
         
     void Update()
     {

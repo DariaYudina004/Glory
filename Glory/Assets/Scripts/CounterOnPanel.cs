@@ -1,10 +1,8 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CounterOnPanel : Ball
 {
-    //[SerializeField] TextMeshPro textToEdit;
     [SerializeField] TextMeshProUGUI textToEditUI;
     [SerializeField] TextMeshProUGUI missedBalls;
 
@@ -20,12 +18,14 @@ public class CounterOnPanel : Ball
 
     public void MissBalls()
     {
-        countOfMisstBall = 1000 - GlobalControl.healthOfPlayer;
+        Health health = GetComponent<Health>();
+        countOfMisstBall = 100 - health.healthOfPlayer;
+        Debug.Log(health.healthOfPlayer);
         missedBalls.text = countOfMisstBall.ToString();
     }
     public void ChangeText()
     {
-        countOfHittBall = GlobalControl.countofHit;
+        countOfHittBall = count;
         textToEditUI.text = countOfHittBall.ToString();
     }
 }

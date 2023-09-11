@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Generation : DifficultyLevel
 {
-    [SerializeField] private Transform[] SpawnTransform;
+    [SerializeField] private List<Transform> SpawnTransform;
     [SerializeField] private Transform TargetTransform;
 
     [SerializeField] private float AngleInDegrees;
@@ -18,10 +18,15 @@ public class Generation : DifficultyLevel
     private GameObject randObject;
     private Transform randPoint;
 
+    [SerializeField] AudioSource song;
+
     private void Start()
     {
         DelayLevel = GlobalControl.DelayLevel;
         Debug.Log(DelayLevel);
+        song = GlobalControl.Song;
+        song.Play();
+        Debug.Log(song);
     }
     void Update()
     {
@@ -32,7 +37,7 @@ public class Generation : DifficultyLevel
     public void Spawner()
     {
         randObject = ball[Random.Range(0, ball.Count - 1)];
-        randPoint = SpawnTransform[Random.Range(0, SpawnTransform.Length - 1)];
+        randPoint = SpawnTransform[Random.Range(0, SpawnTransform.Count - 1)];
 
         randPoint.localEulerAngles = new Vector3(-AngleInDegrees, 0f, 0f);// изменение положения пушки поссредством изменения угла в инспекторе
 

@@ -11,7 +11,7 @@ public class Shop : MonoBehaviour
     [SerializeField] TextMeshProUGUI status;
     [SerializeField] GameObject colorsOfBalls;
     [SerializeField] int ballIndex = 0;
-    private int addObjects;
+
 
     private ShopManager manager;
 

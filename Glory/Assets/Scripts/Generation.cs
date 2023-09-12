@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Generation : DifficultyLevel
 {
     [SerializeField] private List<Transform> SpawnTransform;
@@ -18,15 +19,14 @@ public class Generation : DifficultyLevel
     private GameObject randObject;
     private Transform randPoint;
 
-    [SerializeField] AudioSource song;
+    [SerializeField] AudioSource Song;
 
     private void Start()
     {
         DelayLevel = GlobalControl.DelayLevel;
         Debug.Log(DelayLevel);
-        song = GlobalControl.Song;
-        song.Play();
-        Debug.Log(song);
+        Song = GlobalControl.Song;
+        Debug.Log(Song);
     }
     void Update()
     {
@@ -65,6 +65,13 @@ public class Generation : DifficultyLevel
             time = 0;
             count++;
         }
+    }
+
+    public void Sound()
+    {
+
+        Song = GlobalControl.Song;
+        Debug.Log(Song);
 
     }
 }

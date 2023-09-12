@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +23,7 @@ public class Shop : MonoBehaviour
         PlayerPrefs.SetInt("BallBought" + 0, 1);
 
         UpdateInfo();
-    } 
+    }
 
     public void SetManager(ShopManager shopManager)
     {
@@ -39,13 +37,13 @@ public class Shop : MonoBehaviour
         {
             status.text = "Выбрана";
         }
-        else if(PlayerPrefs.GetInt("BallBought" + ballIndex, 0) == 1)
+        else if (PlayerPrefs.GetInt("BallBought" + ballIndex, 0) == 1)
         {
-            status.text = "Куплена";
+            status.text = "Куплено";
         }
         else
         {
-            status.text =  ballPrice.ToString();
+            status.text = ballPrice.ToString();
         }
     }
 
@@ -53,7 +51,7 @@ public class Shop : MonoBehaviour
     {
         Ball count = GetComponent<Ball>();
         //int money = PlayerPrefs.GetInt("Money",count.count);
-        int money = PlayerPrefs.GetInt("Money",1000);
+        int money = PlayerPrefs.GetInt("Money", 100);
 
         if (PlayerPrefs.GetInt("BallBought" + ballIndex, 0) != 1)
         {
@@ -63,7 +61,7 @@ public class Shop : MonoBehaviour
                 PlayerPrefs.SetInt("Money", money);
                 PlayerPrefs.SetInt("BallBought" + ballIndex, 1);
 
-                
+
                 Generation add = new Generation();
                 add.ball.Add(gameObject);
 

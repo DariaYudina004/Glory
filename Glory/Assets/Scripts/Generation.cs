@@ -19,18 +19,21 @@ public class Generation : DifficultyLevel
     private GameObject randObject;
     private Transform randPoint;
 
-    [SerializeField] AudioSource Song;
+    public ChoosenSong choosenSong;
 
     private void Start()
     {
         DelayLevel = GlobalControl.DelayLevel;
         Debug.Log(DelayLevel);
-        Song = GlobalControl.Song;
-        Debug.Log(Song);
+
+
     }
     void Update()
     {
         Invoke("Spawner", invokeDelay);
+        Debug.Log("перед вызовом метода");
+        choosenSong.ChooseSong();
+        Debug.Log("не вошли в метод");
 
     }
 
@@ -67,11 +70,4 @@ public class Generation : DifficultyLevel
         }
     }
 
-    public void Sound()
-    {
-
-        Song = GlobalControl.Song;
-        Debug.Log(Song);
-
-    }
 }

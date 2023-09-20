@@ -3558,7 +3558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &468765122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9140,12 +9140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8877954d0308124b85eed95aa186397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 3282229763515461115, guid: e9124f76befc5c04bad5722ac738eff6, type: 3}
-  time: 0
-  count: 0
-  SpawnTransform: {fileID: 848263810}
-  TargetTransform: {fileID: 1411705680}
-  invokeDelay: 5
 --- !u!1 &852526233
 GameObject:
   m_ObjectHideFlags: 0
@@ -20381,12 +20375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8877954d0308124b85eed95aa186397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 3282229763515461115, guid: e9124f76befc5c04bad5722ac738eff6, type: 3}
-  time: 0
-  count: 0
-  SpawnTransform: {fileID: 1912044348}
-  TargetTransform: {fileID: 1411705680}
-  invokeDelay: 5
 --- !u!1 &1920596930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100050, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}

@@ -19,13 +19,14 @@ public class Generation : DifficultyLevel
     private GameObject randObject;
     private Transform randPoint;
 
-    public ChoosenSong choosenSong;
+    public NumberOfSong NumberOfSong;
+
 
     private void Start()
     {
         DelayLevel = GlobalControl.DelayLevel;
         Debug.Log(DelayLevel);
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().PlayOneShot(NumberOfSong.AudioClip);
 
     }
     void Update()

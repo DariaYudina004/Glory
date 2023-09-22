@@ -25,7 +25,6 @@ public class ChoosenSong : MonoBehaviour
             {
                 Debug.Log("Внутри условия");
                 GetComponent<AudioSource>().clip = NumberOfSong.AudioClip;
-
                 Debug.Log("**************");
                 Debug.Log(NumberOfSong.SongIndex);
                 Debug.Log(NumberOfSong.AudioClip);

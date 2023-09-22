@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: SOS
   m_EditorClassIdentifier: 
   <ID>k__BackingField: SOS
-  <Button>k__BackingField: {fileID: 0}
-  <SongOnStage>k__BackingField: {fileID: 699784084573095786, guid: 8a1935d39f53f61498956cfe6faa94c5, type: 3}
+  <SongOnStage>k__BackingField: {fileID: 9188237877907685598, guid: f4c18d863b8950f4d8158690ce9d7491, type: 3}
   <MoneyAfterSong>k__BackingField: 0

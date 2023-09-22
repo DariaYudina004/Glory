@@ -25,15 +25,12 @@ public class Generation : DifficultyLevel
     {
         DelayLevel = GlobalControl.DelayLevel;
         Debug.Log(DelayLevel);
-
+        GetComponent<AudioSource>().Play();
 
     }
     void Update()
     {
         Invoke("Spawner", invokeDelay);
-        Debug.Log("перед вызовом метода");
-        choosenSong.ChooseSong();
-        Debug.Log("не вошли в метод");
 
     }
 

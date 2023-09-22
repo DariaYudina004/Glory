@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BlindingLights
   m_EditorClassIdentifier: 
   <ID>k__BackingField: BlindingLights
-  <Button>k__BackingField: {fileID: 0}
-  <SongOnStage>k__BackingField: {fileID: 372172796540174042, guid: f0b89a3ed89c57342a7f1970ab7586cd, type: 3}
+  <SongOnStage>k__BackingField: {fileID: 9188237877907685598, guid: f4c18d863b8950f4d8158690ce9d7491, type: 3}
   <MoneyAfterSong>k__BackingField: 0

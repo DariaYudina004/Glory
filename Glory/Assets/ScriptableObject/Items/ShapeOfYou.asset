@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1809e03f3a238a64d90159765802a7d7, type: 3}
-  m_Name: Applause
+  m_Name: ShapeOfYou
   m_EditorClassIdentifier: 
-  <ID>k__BackingField: Applause
+  <ID>k__BackingField: ShapeOfYou
   <SongOnStage>k__BackingField: {fileID: 9188237877907685598, guid: f4c18d863b8950f4d8158690ce9d7491, type: 3}
-  <MoneyAfterSong>k__BackingField: 9999
+  <MoneyAfterSong>k__BackingField: 0

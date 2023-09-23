@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Generation : DifficultyLevel
+public class Generation : MonoBehaviour
 {
     [SerializeField] private List<Transform> SpawnTransform;
     [SerializeField] private Transform TargetTransform;
@@ -19,19 +19,18 @@ public class Generation : DifficultyLevel
     private GameObject randObject;
     private Transform randPoint;
 
-    public NumberOfSong NumberOfSong;
-
+    private float level;
+    private EndOfGame endOfGame;
 
     private void Start()
     {
-        DelayLevel = GlobalControl.DelayLevel;
-        Debug.Log(DelayLevel);
-        GetComponent<AudioSource>().PlayOneShot(NumberOfSong.AudioClip);
-
+        level = GlobalControl.DelayLevel;
+        Debug.Log(level);
     }
     void Update()
     {
         Invoke("Spawner", invokeDelay);
+        endOfGame.End();
 
     }
 
@@ -48,10 +47,10 @@ public class Generation : DifficultyLevel
         transform.rotation = Quaternion.LookRotation(fromToXZ, Vector3.up); // объект поворачивается за целью и следит за ее передвижением 
 
         time = Time.deltaTime + time;
-        Debug.Log(DelayLevel);
-        if (time > DelayLevel)
+        Debug.Log(level);
+        if (time > level)
         {
-            Debug.Log(DelayLevel);
+            Debug.Log(level);
             float x = fromToXZ.magnitude; // расстояние от стрелка до цели в горизонтальной плоскости. Длина вектора fromToXZ
             float y = fromTo.y; // 
 

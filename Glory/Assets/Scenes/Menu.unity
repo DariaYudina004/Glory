@@ -5624,11 +5624,10 @@ GameObject:
   - component: {fileID: 620842313}
   - component: {fileID: 620842312}
   - component: {fileID: 620842311}
-  - component: {fileID: 620842314}
   - component: {fileID: 620842315}
   m_Layer: 0
   m_Name: "Button (\u0447\u0435\u0442\u0432\u0435\u0440\u0442\u0430\u044F \u043F\u0435\u0441\u043D\u044F)"
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5782,7 +5781,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 620842314}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NumberOfSong, Assembly-CSharp
         m_MethodName: DebageOfThis
         m_Mode: 1
@@ -5897,13 +5896,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 2
+  - eventID: 10
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 620842312}
-          m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
-          m_MethodName: ClickSound
+        - m_Target: {fileID: 620842315}
+          m_TargetAssemblyTypeName: ChoosenSong, Assembly-CSharp
+          m_MethodName: NotChoosen
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6023,20 +6022,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &620842314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620842306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f459f34eb8cde8429c0955bb23e70e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <SongIndex>k__BackingField: ShapeOfYou
-  <AudioClip>k__BackingField: {fileID: 8300000, guid: a3ae1af591c37f04bb313e7f61ad1d2c, type: 3}
 --- !u!114 &620842315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6049,8 +6034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebaed8c999e30b46a617c25923e04ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongItemsConfig: {fileID: 11400000, guid: a2f6546789b63ba44a080896f58b8a2f, type: 2}
-  NumberOfSong: {fileID: 620842314}
 --- !u!1 &676117138
 GameObject:
   m_ObjectHideFlags: 0
@@ -6609,11 +6592,10 @@ GameObject:
   - component: {fileID: 801948340}
   - component: {fileID: 801948339}
   - component: {fileID: 801948338}
-  - component: {fileID: 801948341}
   - component: {fileID: 801948342}
   m_Layer: 0
   m_Name: "Button (\u0442\u0440\u0435\u0442\u044C\u044F \u043F\u0435\u0441\u043D\u044F)"
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6779,7 +6761,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 801948341}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NumberOfSong, Assembly-CSharp
         m_MethodName: DebageOfThis
         m_Mode: 1
@@ -6882,13 +6864,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 2
+  - eventID: 10
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 801948339}
-          m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
-          m_MethodName: ClickSound
+        - m_Target: {fileID: 801948342}
+          m_TargetAssemblyTypeName: ChoosenSong, Assembly-CSharp
+          m_MethodName: NotChoosen
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7008,20 +6990,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &801948341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801948333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f459f34eb8cde8429c0955bb23e70e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <SongIndex>k__BackingField: BlindingLights
-  <AudioClip>k__BackingField: {fileID: 8300000, guid: 75c1aa6cf8d66a84c9e04d0588edbf71, type: 3}
 --- !u!114 &801948342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7034,8 +7002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebaed8c999e30b46a617c25923e04ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongItemsConfig: {fileID: 11400000, guid: a2f6546789b63ba44a080896f58b8a2f, type: 2}
-  NumberOfSong: {fileID: 801948341}
 --- !u!1 &817183458
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,12 +8117,11 @@ GameObject:
   - component: {fileID: 1058795266}
   - component: {fileID: 1058795270}
   - component: {fileID: 1058795272}
-  - component: {fileID: 1058795271}
   - component: {fileID: 1058795273}
   - component: {fileID: 1058795274}
   m_Layer: 0
   m_Name: "Button (\u0432\u0442\u043E\u0440\u0430\u044F \u043F\u0435\u0441\u043D\u044F)"
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8310,7 +8275,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1058795271}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NumberOfSong, Assembly-CSharp
         m_MethodName: DebageOfThis
         m_Mode: 1
@@ -8492,20 +8457,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1058795271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058795264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f459f34eb8cde8429c0955bb23e70e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <SongIndex>k__BackingField: Applause
-  <AudioClip>k__BackingField: {fileID: 8300000, guid: 3ec71575ccf7b2044b6be52f1316a5dc, type: 3}
 --- !u!114 &1058795272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8549,6 +8500,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1058795274}
+          m_TargetAssemblyTypeName: ChoosenSong, Assembly-CSharp
+          m_MethodName: NotChoosen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1058795274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8561,8 +8528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebaed8c999e30b46a617c25923e04ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongItemsConfig: {fileID: 11400000, guid: a2f6546789b63ba44a080896f58b8a2f, type: 2}
-  NumberOfSong: {fileID: 1058795271}
 --- !u!1 &1069451698
 GameObject:
   m_ObjectHideFlags: 0
@@ -12093,11 +12058,10 @@ GameObject:
   - component: {fileID: 1651515607}
   - component: {fileID: 1651515606}
   - component: {fileID: 1651515605}
-  - component: {fileID: 1651515608}
   - component: {fileID: 1651515609}
   m_Layer: 0
   m_Name: "Button (\u043F\u044F\u0442\u0430\u044F \u043F\u0435\u0441\u043D\u044F)"
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12251,7 +12215,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1651515608}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NumberOfSong, Assembly-CSharp
         m_MethodName: DebageOfThis
         m_Mode: 1
@@ -12366,13 +12330,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 2
+  - eventID: 10
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1651515606}
-          m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
-          m_MethodName: ClickSound
+        - m_Target: {fileID: 1651515609}
+          m_TargetAssemblyTypeName: ChoosenSong, Assembly-CSharp
+          m_MethodName: NotChoosen
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12492,20 +12456,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1651515608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651515600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f459f34eb8cde8429c0955bb23e70e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <SongIndex>k__BackingField: CoutingStars
-  <AudioClip>k__BackingField: {fileID: 8300000, guid: bad4a6eff55ee6746849987dc90c68e5, type: 3}
 --- !u!114 &1651515609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12518,8 +12468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebaed8c999e30b46a617c25923e04ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongItemsConfig: {fileID: 11400000, guid: a2f6546789b63ba44a080896f58b8a2f, type: 2}
-  NumberOfSong: {fileID: 1651515608}
 --- !u!1001 &1653298312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14052,11 +14000,10 @@ GameObject:
   - component: {fileID: 1916572417}
   - component: {fileID: 1916572416}
   - component: {fileID: 1916572415}
-  - component: {fileID: 1916572418}
   - component: {fileID: 1916572419}
   m_Layer: 0
   m_Name: "Button(\u043F\u0435\u0440\u0432\u0430\u044F \u043F\u0435\u0441\u043D\u044F)"
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14210,7 +14157,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1916572418}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NumberOfSong, Assembly-CSharp
         m_MethodName: DebageOfThis
         m_Mode: 1
@@ -14325,13 +14272,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 2
+  - eventID: 10
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1916572416}
-          m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
-          m_MethodName: ClickSound
+        - m_Target: {fileID: 1916572419}
+          m_TargetAssemblyTypeName: ChoosenSong, Assembly-CSharp
+          m_MethodName: NotChoosen
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14451,20 +14398,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1916572418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916572410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f459f34eb8cde8429c0955bb23e70e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <SongIndex>k__BackingField: SOS
-  <AudioClip>k__BackingField: {fileID: 8300000, guid: 418a281db60db0d4d8e6a843c56c97de, type: 3}
 --- !u!114 &1916572419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14477,8 +14410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebaed8c999e30b46a617c25923e04ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongItemsConfig: {fileID: 11400000, guid: a2f6546789b63ba44a080896f58b8a2f, type: 2}
-  NumberOfSong: {fileID: 1916572418}
 --- !u!1 &1927409496
 GameObject:
   m_ObjectHideFlags: 0
@@ -15599,7 +15530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8271c54012a1f304585d3555ff3fc303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song: {fileID: 0}
+  AudioClip: {fileID: 0}
 --- !u!4 &2130154283
 Transform:
   m_ObjectHideFlags: 0

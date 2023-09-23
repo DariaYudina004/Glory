@@ -609,7 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 2022198297}
   - {fileID: 0}
@@ -627,7 +626,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &97356341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4350,7 +4348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 499258500}
   - {fileID: 0}
@@ -4368,7 +4365,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &513584589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4829,7 +4825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 592922461}
   - {fileID: 0}
@@ -4847,7 +4842,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &537206912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5308,7 +5302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 247575057}
   - {fileID: 0}
@@ -5326,7 +5319,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &579945200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5664,7 +5656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 1885291281}
   - {fileID: 0}
@@ -5682,7 +5673,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &613285021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6736,6 +6726,51 @@ Transform:
   m_Father: {fileID: 543450652753247781}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 68.556, z: 0}
+--- !u!1 &720814406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720814408}
+  - component: {fileID: 720814407}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &720814407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720814406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914487b0649fac04b81b92d3423cef98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 468765121}
+--- !u!4 &720814408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720814406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &730210255
 GameObject:
   m_ObjectHideFlags: 0
@@ -6766,7 +6801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 566992493}
   - {fileID: 0}
@@ -6784,7 +6818,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &730210257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14276,7 +14309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 1116027168}
   - {fileID: 0}
@@ -14294,7 +14326,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &1341016687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15680,7 +15711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 1351179608}
   - {fileID: 0}
@@ -15698,7 +15728,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &1467130174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16531,7 +16560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 879188960}
   - {fileID: 0}
@@ -16549,7 +16577,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &1531862555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16913,7 +16940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 514758223}
   - {fileID: 0}
@@ -16931,7 +16957,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &1555805381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17059,7 +17084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 137069992}
   - {fileID: 0}
@@ -17077,7 +17101,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &1594563281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21525,7 +21548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 325195757}
   - {fileID: 0}
@@ -21543,7 +21565,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &2031415912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21603,7 +21624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 1621384805}
   - {fileID: 0}
@@ -21621,7 +21641,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &2035321783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21878,8 +21897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7055d5c5eb0e49a4dac56768bb73cbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfPlayer: 1000
-  panel: {fileID: 468765121}
 --- !u!1 &2042576651
 GameObject:
   m_ObjectHideFlags: 0
@@ -22195,7 +22212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c9dde6464ab1429bde062f937e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayLevel: 0
   SpawnTransform:
   - {fileID: 1078325352}
   - {fileID: 0}
@@ -22213,7 +22229,6 @@ MonoBehaviour:
   time: 0
   count: 0
   invokeDelay: 5
-  choosenSong: {fileID: 0}
 --- !u!65 &2056752035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22276,8 +22291,8 @@ GameObject:
   - component: {fileID: 2074687664}
   - component: {fileID: 2074687666}
   - component: {fileID: 2074687668}
+  - component: {fileID: 2074687669}
   - component: {fileID: 2074687665}
-  - component: {fileID: 2074687667}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -22293,7 +22308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074687662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2190334, y: 30.523438, z: 17.326534}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22409,18 +22424,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2074687667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074687662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115d1bde338c36f439ef9e9a7f31d1f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2074687668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22433,8 +22436,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebaed8c999e30b46a617c25923e04ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongItemsConfig: {fileID: 0}
-  NumberOfSong: {fileID: 0}
+--- !u!114 &2074687669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074687662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8271c54012a1f304585d3555ff3fc303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClip: {fileID: 0}
 --- !u!1001 &2078905238
 PrefabInstance:
   m_ObjectHideFlags: 0

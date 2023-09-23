@@ -19,12 +19,13 @@ public class CounterOnPanel : Ball
     public void MissBalls()
     {
         Health health = GetComponent<Health>();
-        countOfMisstBall = 100 - health.healthOfPlayer;
-        Debug.Log(health.healthOfPlayer);
+        countOfMisstBall = 100 - health.HealthOfPlayer;
+        Debug.Log(health.HealthOfPlayer);
         missedBalls.text = countOfMisstBall.ToString();
     }
     public void ChangeText()
     {
+        Debug.Log(count);
         countOfHittBall = count;
         textToEditUI.text = countOfHittBall.ToString();
     }

@@ -16,6 +16,8 @@ public class Ball : MonoBehaviour
             Debug.Log("hit");
             Debug.Log(countofHit);
             count = countofHit;
+            Debug.Log("Количество отбитых шаров" + count);
+
 
         }
     }

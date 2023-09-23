@@ -3,6 +3,10 @@ using UnityEngine;
 public class StartPlayingSongOnScene : ChoosenSong
 {
     [field: SerializeField] public AudioClip AudioClip;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private float time = 0;
+
+    
 
     private void Awake()
     {
@@ -15,6 +19,19 @@ public class StartPlayingSongOnScene : ChoosenSong
             DontDestroyOnLoad(gameObject);
             GetComponent<AudioSource>().clip = GlobalControl.MainAudioClip;
             GetComponent<AudioSource>().Play();
+        }
+
+       
+    }
+    private void Update()
+    {
+        time += Time.deltaTime;
+        if (time > GlobalControl.MainAudioClip.length + 2)
+        {
+
+            panel.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            AudioListener.pause = false;
         }
     }
 

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] protected int countofHit = 0;
-    public int count;
+    private int count = 0;
+    public int Count { get { return count; } set { count = value; } }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -12,10 +12,9 @@ public class Ball : MonoBehaviour
         Mic mic = collision.gameObject.GetComponent<Mic>();
         if (collision.gameObject.GetComponent<Mic>())
         {
-            countofHit++;
+            Count++;
             Debug.Log("hit");
-            Debug.Log(countofHit);
-            count = countofHit;
+            Debug.Log(Count);
             Debug.Log("Количество отбитых шаров" + count);
 
 

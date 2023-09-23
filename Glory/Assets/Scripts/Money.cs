@@ -14,7 +14,7 @@ public class Money : MonoBehaviour
     public void UpdateMoney()
     {
         Ball coin = GetComponent<Ball>();
-        coins = PlayerPrefs.GetInt("Money", coin.count);
+        coins = PlayerPrefs.GetInt("Money", coin.Count);
         MoneyText.text = coins.ToString();
     }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 
@@ -30,7 +31,6 @@ public class Generation : MonoBehaviour
     void Update()
     {
         Invoke("Spawner", invokeDelay);
-        endOfGame.End();
 
     }
 
@@ -65,6 +65,8 @@ public class Generation : MonoBehaviour
             time = 0;
             count++;
         }
+
+       
     }
 
 }

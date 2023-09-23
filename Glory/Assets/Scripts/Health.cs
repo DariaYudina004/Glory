@@ -4,6 +4,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     private int healthOfPlayer = 100;
+    [SerializeField] private GameObject panel;
     public int HealthOfPlayer
     {
         get { return healthOfPlayer; }
@@ -25,7 +26,12 @@ public class Health : MonoBehaviour
         {
             Debug.Log(HealthOfPlayer);
             Debug.Log(HealthOfPlayer);
-
+            if (healthOfPlayer <=0)
+            {
+                panel.gameObject.SetActive(true);
+                Time.timeScale = 0;
+                AudioListener.pause = true;
+            }
             HealthOfPlayer -= 1;
             Debug.Log(HealthOfPlayer);
             Debug.Log(HealthOfPlayer);

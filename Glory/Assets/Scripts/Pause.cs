@@ -7,17 +7,26 @@ public class Pause : MonoBehaviour
     
     [SerializeField] Transform player;
     [SerializeField] GameObject panel;
-        
-    void Update()
+
+    private void OnTriggerEnter(Collider collision)
     {
-        if (player.position.x >= 50)
+        if (collision.gameObject.GetComponent<Health>())
         {
             panel.SetActive(true);
             Time.timeScale = 0;
-            
+            AudioListener.pause = true;
         }
-        
     }
+    //void Update()
+    //{
+    //    if (player.position.x >= 50)
+    //    {
+    //        panel.SetActive(true);
+    //        Time.timeScale = 0;
+
+    //    }
+
+    //}
 
     public void ContinueGame()
     {
@@ -26,7 +35,8 @@ public class Pause : MonoBehaviour
         var posPlayer = player.position;
         posPlayer.x -= 50;
         player.position = posPlayer;
-        
+        AudioListener.pause = false;
+
     }
     public void ExitLevel()
     {

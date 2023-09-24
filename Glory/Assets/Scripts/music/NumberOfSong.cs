@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class NumberOfSong : MonoBehaviour
 {
-    public int songIndex;
+    [field: SerializeField] public AudioClip AudioClip { get; private set; }
+
+    public void DebageOfThis()
+    {
+
+        Debug.Log(AudioClip);
+    }
 }
 
 

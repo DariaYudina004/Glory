@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1809e03f3a238a64d90159765802a7d7, type: 3}
+  m_Name: CoutingStars
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: CoutingStars
+  <SongOnStage>k__BackingField: {fileID: 9188237877907685598, guid: f4c18d863b8950f4d8158690ce9d7491, type: 3}
+  <MoneyAfterSong>k__BackingField: 0

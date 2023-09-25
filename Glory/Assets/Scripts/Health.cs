@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
 {
     private int healthOfPlayer = 100;
     [SerializeField] private GameObject panel;
+    private CounterOnPanel counterOnPanel;
     public int HealthOfPlayer
     {
         get { return healthOfPlayer; }
@@ -19,7 +20,7 @@ public class Health : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Ball ball = collision.gameObject.GetComponent<Ball>();
+
         Debug.Log(HealthOfPlayer);
         Debug.Log(HealthOfPlayer);
         if (collision.gameObject.GetComponent<Ball>())
@@ -31,6 +32,7 @@ public class Health : MonoBehaviour
                 panel.gameObject.SetActive(true);
                 Time.timeScale = 0;
                 AudioListener.pause = true;
+
             }
             HealthOfPlayer -= 1;
             Debug.Log(HealthOfPlayer);

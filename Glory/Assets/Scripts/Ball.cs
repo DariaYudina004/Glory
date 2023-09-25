@@ -9,15 +9,15 @@ public class Ball : MonoBehaviour
     {
         Debug.Log("bullet hit");
 
-        Mic mic = collision.gameObject.GetComponent<Mic>();
         if (collision.gameObject.GetComponent<Mic>())
         {
             Count++;
             Debug.Log("hit");
             Debug.Log(Count);
-            Debug.Log("Количество отбитых шаров" + count);
+            Debug.Log("Количество отбитых шаров" + Count);
 
 
         }
+        Debug.Log(Count);
     }
 }

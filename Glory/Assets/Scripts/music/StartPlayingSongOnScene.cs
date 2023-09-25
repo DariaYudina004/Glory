@@ -6,23 +6,25 @@ public class StartPlayingSongOnScene : ChoosenSong
     [SerializeField] private GameObject panel;
     [SerializeField] private float time = 0;
 
-    
-
     private void Awake()
     {
         GameObject[] obj = GameObject.FindGameObjectsWithTag("Music");
-        if (obj.Length> 1) {
-        Destroy(gameObject);
+        if (obj.Length > 1)
+        {
+            Destroy(gameObject);
         }
         else
         {
             DontDestroyOnLoad(gameObject);
             GetComponent<AudioSource>().clip = GlobalControl.MainAudioClip;
             GetComponent<AudioSource>().Play();
+            if (gameObject.tag != "Music")
+            {
+                gameObject.tag = "Music";
+            }
         }
-
-       
     }
+    
     private void Update()
     {
         time += Time.deltaTime;

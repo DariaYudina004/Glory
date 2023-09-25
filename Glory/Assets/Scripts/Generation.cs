@@ -21,7 +21,6 @@ public class Generation : MonoBehaviour
     private Transform randPoint;
 
     private float level;
-    private EndOfGame endOfGame;
 
     private void Start()
     {

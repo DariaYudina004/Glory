@@ -3632,7 +3632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToEditUI: {fileID: 2085009750}
   missedBalls: {fileID: 1463679141}
-  healthNow: {fileID: 0}
+  healthNow: {fileID: 2040648623}
+  ball: {fileID: 1859213323}
 --- !u!1 &469769520
 GameObject:
   m_ObjectHideFlags: 0
@@ -15432,6 +15433,7 @@ MonoBehaviour:
   textToEditUI: {fileID: 0}
   missedBalls: {fileID: 0}
   healthNow: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!1 &1467130172
 GameObject:
   m_ObjectHideFlags: 0
@@ -19415,6 +19417,64 @@ MonoBehaviour:
     m_FixedHeight: 1
     m_StretchWidth: 1
     m_StretchHeight: 0
+--- !u!1 &1859213322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859213324}
+  - component: {fileID: 1859213325}
+  - component: {fileID: 1859213323}
+  m_Layer: 7
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859213323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859213322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8c6fca4490f3a4b83b55908455b8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1859213324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859213322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1859213325
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859213322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1859228458
 GameObject:
   m_ObjectHideFlags: 0
@@ -22048,7 +22108,7 @@ GameObject:
   - component: {fileID: 2074687665}
   m_Layer: 0
   m_Name: Music
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22720,6 +22780,7 @@ MonoBehaviour:
   textToEditUI: {fileID: 0}
   missedBalls: {fileID: 0}
   healthNow: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!1 &2090657851
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.Utilities;
 
 public class CounterOnPanel : MonoBehaviour
 {
@@ -7,13 +8,13 @@ public class CounterOnPanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI missedBalls;
 
     [SerializeField] private Health healthNow;
-    private Ball ball;
+    [SerializeField] private Ball ball;
 
 
     private int countOfHittBall;
     private int countOfMisstBall;
 
-    private void Awake()
+    private void Update()
     {
         MissBalls();
         ChangeText();
@@ -28,7 +29,8 @@ public class CounterOnPanel : MonoBehaviour
     }
     public void ChangeText()
     {
-        Debug.Log("Количество шаров в ChangeText" + ball.Count);
+        Debug.Log(ball.Count);
+        Debug.Log("Количество шаров в ChangeText  " + ball.Count);
         countOfHittBall = ball.Count;
         textToEditUI.text = countOfHittBall.ToString();
     }
